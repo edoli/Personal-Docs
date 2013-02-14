@@ -21,6 +21,7 @@ Content-Type: application/json
 
 Request:
 { "username" : string, "password" : string, "apikey" : string }
+
 Response:
 { "login-success" : boolean }
 ```
@@ -44,6 +45,7 @@ Content-Type: application/json
 
 Request:
 {  }
+
 Response:
 { "items" : 
     [ { "id" : string, 
@@ -64,6 +66,7 @@ Content-Type: application/json
 
 Request:
 {  }
+
 Response:
 { "items" : 
     [ { "id" : string, 
@@ -123,6 +126,7 @@ Content-Type: application/json
 
 Request:
 {  }
+
 Response:
 { "items" : 
     [ { "id" : string, 
@@ -145,6 +149,7 @@ Content-Type: application/json
 
 Request:
 { "id" : string  }
+
 Response:
 {  "id" : string, 
    "name" : string, 
