@@ -6,7 +6,7 @@ Kiple API
 Data Type
 -------------
 
-**Date**: ISO 8601
+**Date**: String. ISO 8601
 
 **Color**: String as Hexa format
 
