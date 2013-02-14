@@ -3,6 +3,27 @@ Kiple API
 
 ! Do not use Tab. Instead use spaces.
 
+* [Data Type](#data-type)
+* [User](#user)
+    * [Login](#login)
+	* [User Data](#user-data)
+	* [Modify User Data](#modify-user-data)
+	* [Basket](#basket)
+	* [Pick](#pick)
+	* [Check Order](#check-order)
+	* [Cloth History](#cloth-history)
+	* [FAQ](#faq)
+	* [Help](#help)
+* [Shop](#shop)
+	* [Cloth List](#cloth-list)
+	* [Cloth](#cloth)
+	* [Special List](#special-list)
+	* [Special](#special)
+* [Community](#community)
+	* [Stream List](#stream-list)
+	* [Stream](#stream)
+
+
 Data Type
 -------------
 
@@ -47,7 +68,6 @@ Data Type
 > * 0: 남아
 > * 1: 여아
 > * 2: 공용
-
 
 User
 ----
