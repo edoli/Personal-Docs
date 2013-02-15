@@ -83,7 +83,7 @@ Accept: application/json
 Content-Type: application/json
 
 Request:
-{ "username" : string, "password" : string, "apikey" : string }
+{ "username" : string, "password" : string }
 
 Response:
 { "login-success" : boolean }
