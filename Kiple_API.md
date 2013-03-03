@@ -53,7 +53,7 @@ Data Type
 > 위의 컬러표는 현재 키플에서 사용하는 컬러표인듯하다.
 > 정확한 컬러표는 나중에 결정하는게 좋을 듯하다.
 
-**Shoptype**: TODO
+**Shoptype**: 필요없어!
 
 **Category**: Int. Sub category takes two more digits to represent the category.
 > example 
@@ -81,13 +81,6 @@ Data Type
 > * 0015: 신발 
 > * 0016: 기타
 > * 0017: 도서/DVD
-
-
-
-
-
-> * etc...
-> 정확한 카테고리는 나중에 결정하는게 좋을 듯 하다.
 
 **Gender**: Int
 > * 0: 남아
@@ -212,7 +205,7 @@ Response:
 도움말
 
 ```
-TODO
+그냥 앱 안에 하드코딩하는게 편하겠다
 ```
 
 ### Help
