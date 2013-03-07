@@ -311,7 +311,7 @@ Response:
     [ { "id" : int, 
         "name" : string, 
         "price" : int,
-        "age" : string,
+        "age" : int,
         "image-url" : string } 
     ] 
 }
@@ -336,8 +336,8 @@ Response:
    "content" : string, // 자세한 정보 부분. ex) 이 옷에는 얼룩이 약간 묻어 있습니다.
    "price" : int,
    "max-kpt" : int, // 키플머니 사용 가능액
-   "max-age" : string,
-   "min-age" : string,
+   "max-age" : int,
+   "min-age" : int,
    "size" : string,
    "season" : [ string ], // ex) [ "봄", "여름", "가을" ]
    "category" : string, 
