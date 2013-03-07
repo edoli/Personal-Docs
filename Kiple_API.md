@@ -112,13 +112,78 @@ Response:
 사용자 정보 갖어오기
 
 ```
-TODO
+URL:
+Method: GET
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ }
+
+Response:
+{ "id" : int,
+  "name" : string,
+  "email" : string,
+  "house-phone-number" : string,
+  "cell-phone-number" : string,
+  "address" : string,
+  "kiple-point" : int,
+  "children" :
+    [ { "id" : int,
+        "gender" : gender,
+        "birthday" : date }
+    ]
+ }
 ```
 
 ### Modify User Data
 
 ```
-TODO
+URL:
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "name" : string,
+  "email" : string,
+  "house-phone-number" : string,
+  "cell-phone-number" : string,
+  "address" : string }
+
+Response:
+{ "success" : boolean }
+```
+
+### Add Child
+
+```
+URL:
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "gender" : gender
+  "birthday" : date }
+
+Response:
+{ "success" : boolean }
+```
+
+### Remove Child
+
+```
+URL:
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "id" : int }
+
+Response:
+{ "success" : boolean }
 ```
 
 ### Basket
@@ -136,7 +201,7 @@ Request:
 
 Response:
 { "items" : 
-    [ { "id" : string, 
+    [ { "id" : int, 
         "name" : string, 
         "price" : int, 
         "image-url" : string } 
@@ -159,7 +224,7 @@ Request:
 
 Response:
 { "items" : 
-    [ { "id" : string, 
+    [ { "id" : int, 
         "name" : string, 
         "price" : int, 
         "image-url" : string } 
@@ -191,7 +256,7 @@ Request:
 FIXME 아직 좀더 알아봐야 함
 Response:
 { "items" : 
-    [ { "id" : string, 
+    [ { "id" : int, 
         "name" : string, 
         "quantity" : int,
         "send-date" : date,
@@ -230,11 +295,11 @@ Accept: application/json
 Content-Type: application/json
 
 Request:
-{ "gender" : gender,
+{ "id" : int
+  "gender" : gender,
   "age" : int,
   "category" : category,
   "color" : color,
-  "shop-type" : shoptype,
   "season" : [ string ] // ex) [ "봄", "여름", "가을" ]
 }
 // 데이터가 없으면 전체를 보여준다.
@@ -243,7 +308,7 @@ Request:
 
 Response:
 { "items" : 
-    [ { "id" : string, 
+    [ { "id" : int, 
         "name" : string, 
         "price" : int,
         "age" : string,
@@ -252,9 +317,9 @@ Response:
 }
 ```
 
-### Cloth
+### Item
 
-옷 id를 이용하여 특정 옷의 정보를 갖어온다.
+아이템의 id를 이용하여 특정 옷의 정보를 갖어온다.
 
 ```
 URL:
@@ -263,18 +328,20 @@ Accept: application/json
 Content-Type: application/json
 
 Request:
-{ "id" : string  }
+{ "id" : int  }
 
 Response:
-{  "id" : string, 
+{  "id" : int, 
    "name" : string, 
    "content" : string, // 자세한 정보 부분. ex) 이 옷에는 얼룩이 약간 묻어 있습니다.
    "price" : int,
-   "available-kiplemoney" : int, // 키플머니 사용 가능액
-   "age" : string,
+   "max-kpt" : int, // 키플머니 사용 가능액
+   "max-age" : string,
+   "min-age" : string,
    "size" : string,
    "season" : [ string ], // ex) [ "봄", "여름", "가을" ]
-   "item" : string, // ex) 바지(긴바지), - , (상태 - 중)
+   "category" : string, 
+   "", 왜이렇게 state들을 나눠놨어
    "color" : color,
    "image-urls" : [ { "url" : string } ]
 } 
@@ -283,28 +350,41 @@ Response:
 ### Special List
 
 ```
-TODO
-```
-
-### Special
-
-// Special id를 이용하여 특정 Special의 옷 리스트를 갖어온다.
-
-```
-URL:
+URL: 
 Method: GET
 Accept: application/json
 Content-Type: application/json
 
 Request:
-{ "id" : string }
+{ }
 
 Response:
 { "items" : 
-    [ { "id" : string, 
+    [ { "id" : int, 
+        "name" : string, 
+        "image-url" : string } 
+    ] 
+}
+```
+
+### Special
+
+// Special id를 이용하여 특정 Special의 아이템 리스트를 갖어온다.
+
+```
+URL: 
+Method: GET
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "id" : int }
+
+Response:
+{ "items" : 
+    [ { "id" : int, 
         "name" : string, 
         "price" : int,
-        "age" : string,
         "image-url" : string } 
     ] 
 }
@@ -326,7 +406,7 @@ Request:
 
 Response:
 { "items" : 
-    [ { "id" : string, 
+    [ { "id" : int, 
         "name" : string, 
         "content" : string,
         "date" : date,
@@ -349,7 +429,7 @@ Request:
 { "id" : string  }
 
 Response:
-{  "id" : string, 
+{  "id" : int, 
    "name" : string, 
    "content" : string,
    "date" : date,
