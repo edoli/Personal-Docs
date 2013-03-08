@@ -296,7 +296,7 @@ Content-Type: application/json
 
 Request:
 { "id" : int
-  "gender" : gender,
+  "gender" : int,
   "age" : int,
   "category" : category,
   "color" : color,
@@ -311,7 +311,9 @@ Response:
     [ { "id" : int, 
         "name" : string, 
         "price" : int,
-        "age" : int,
+        "max-age" : int,
+        "min-age" : int,
+        "gender" : int,
         "image-url" : string } 
     ] 
 }
@@ -335,6 +337,7 @@ Response:
    "name" : string, 
    "content" : string, // 자세한 정보 부분. ex) 이 옷에는 얼룩이 약간 묻어 있습니다.
    "price" : int,
+   "gender" : int,
    "max-kpt" : int, // 키플머니 사용 가능액
    "max-age" : int,
    "min-age" : int,
