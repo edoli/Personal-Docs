@@ -108,9 +108,9 @@ Response:
 { "login-success" : boolean }
 ```
 
-### Login
+### Logout
 
-사용자 로그인
+사용자 로그아웃
 
 ```
 URL: /api/logout/
