@@ -93,7 +93,7 @@ User
 
 ### Login
 
-사용자 로그인
+사용자 로그인. apikey는 "kiple_mobile"로 하도록 하자.
 
 ```
 URL: /api/login/
@@ -102,7 +102,7 @@ Accept: application/json
 Content-Type: application/json
 
 Request:
-{ "username" : string, "password" : string }
+{ "username" : string, "password" : string, "apikey" : string }
 
 Response:
 { "login-success" : boolean }
