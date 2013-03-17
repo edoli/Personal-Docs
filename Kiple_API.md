@@ -96,7 +96,7 @@ User
 사용자 로그인
 
 ```
-URL:
+URL: /api/login/
 Method: POST
 Accept: application/json
 Content-Type: application/json
@@ -108,11 +108,27 @@ Response:
 { "login-success" : boolean }
 ```
 
+### Login
+
+사용자 로그인
+
+```
+URL: /api/logout/
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{}
+
+Response:
+{ "logout-success" : boolean }
+```
 ### User Data
 사용자 정보 갖어오기
 
 ```
-URL:
+URL: /api/user_data/
 Method: GET
 Accept: application/json
 Content-Type: application/json
@@ -139,7 +155,7 @@ Response:
 ### Modify User Data
 
 ```
-URL:
+URL: /api/stream_list/
 Method: POST
 Accept: application/json
 Content-Type: application/json
@@ -158,7 +174,7 @@ Response:
 ### Add Child
 
 ```
-URL:
+URL: 
 Method: POST
 Accept: application/json
 Content-Type: application/json
@@ -214,7 +230,7 @@ Response:
 찜 옷장 보기
 
 ```
-URL:
+URL: 
 Method: GET
 Accept: application/json
 Content-Type: application/json
