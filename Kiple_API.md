@@ -155,7 +155,7 @@ Response:
 ### Modify User Data
 
 ```
-URL: /api/stream_list/
+URL: 
 Method: POST
 Accept: application/json
 Content-Type: application/json
@@ -439,7 +439,7 @@ Response:
 ### Stream
 
 ```
-URL:
+URL: /api/stream_list/
 Method: GET
 Accept: application/json
 Content-Type: application/json
