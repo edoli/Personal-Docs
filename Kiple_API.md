@@ -415,7 +415,7 @@ Community
 ### Stream List
 
 ```
-URL:
+URL: /api/stream_list/
 Method: GET
 Accept: application/json
 Content-Type: application/json
@@ -439,7 +439,7 @@ Response:
 ### Stream
 
 ```
-URL: /api/stream_list/
+URL:
 Method: GET
 Accept: application/json
 Content-Type: application/json
