@@ -461,3 +461,20 @@ Response:
                          ] 
 } 
 ```
+
+### Write Stream
+
+```
+URL:
+Method: Post
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "content" : string,
+  "date" : date,
+  "image" : buffer }
+
+Response:
+{  "success" : boolean }
+```
