@@ -197,26 +197,35 @@ Response:
 { "success" : boolean }
 ```
 
-### Add Child
+### Cart
+
+장바구니 보기
 
 ```
-URL: 
-Method: POST
+URL: /api/cart/
+Method: GET
 Accept: application/json
 Content-Type: application/json
 
 Request:
-{ "gender" : gender
-  "birthday" : date }
+{  }
 
 Response:
-{ "success" : boolean }
+{ "items" : 
+    [ { "id" : int, 
+        "name" : string, 
+        "price" : int, 
+        "image-url" : string } 
+    ] 
+}
 ```
 
-### Remove Child
+### Add to Cart
+
+장바구니에 추가하기
 
 ```
-URL:
+URL: /api/cart/add
 Method: POST
 Accept: application/json
 Content-Type: application/json
@@ -225,30 +234,24 @@ Request:
 { "id" : int }
 
 Response:
-{ "success" : boolean }
+{ "cart-add-success" : boolean }
 ```
 
-### Basket
+### Remove from Cart
 
-장바구니 보기
+장바구니에 추가하기
 
 ```
-URL:
-Method: GET
+URL: /api/cart/add
+Method: POST
 Accept: application/json
 Content-Type: application/json
 
 Request:
-{  }
+{ "id" : int }
 
 Response:
-{ "items" : 
-    [ { "id" : int, 
-        "name" : string, 
-        "price" : int, 
-        "image-url" : string } 
-    ] 
-}
+{ "cart-remove-success" : boolean }
 ```
 
 ### Pick
@@ -256,7 +259,7 @@ Response:
 찜 옷장 보기
 
 ```
-URL: 
+URL: /api/pick/
 Method: GET
 Accept: application/json
 Content-Type: application/json
@@ -272,6 +275,39 @@ Response:
         "image-url" : string } 
     ] 
 }
+```
+### Add to Pick
+
+찜바구니에 추가하기
+
+```
+URL: /api/pick/add/
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "id" : int }
+
+Response:
+{ "pick-add-success" : boolean }
+```
+
+### Remove from Pick
+
+찜바구니에서 제거하기
+
+```
+URL: /api/pick/remove/
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "id" : int }
+
+Response:
+{ "pick-remove-success" : boolean }
 ```
 
 ### Check Order
@@ -448,12 +484,13 @@ Accept: application/json
 Content-Type: application/json
 
 Request:
-{  }
+{ "page" : int }
 
 Response:
 { "items" : 
     [ { "id" : int, 
         "name" : string, 
+        "user-id" : int,
         "content" : string,
         "date" : date,
         "like-number" : int,
