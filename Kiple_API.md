@@ -331,7 +331,7 @@ Response:
         "max-age" : int,
         "min-age" : int,
         "gender" : int,
-        "image-url" : string } 
+        "image-urls" : [ string ] } 
     ] 
 }
 ```
