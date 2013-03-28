@@ -316,7 +316,8 @@ Request:
   "age" : int,
   "category" : category,
   "color" : color,
-  "season" : [ string ] // ex) [ "봄", "여름", "가을" ]
+  "season" : [ string ] // ex) [ "봄", "여름", "가을" ],
+  "page" : int
 }
 // 데이터가 없으면 전체를 보여준다.
 // ex) 나이 데이터가 들어있지 않으면 모든 나이대의 데이터를 response한다.
