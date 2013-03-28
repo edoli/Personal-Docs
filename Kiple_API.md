@@ -305,8 +305,8 @@ Shop
 검색 또는 옷장에서 옷 리스트를 받아온다.
 
 ```
-URL: 
-Method: GET
+URL: /api/cloth_list/
+Method: GET0
 Accept: application/json
 Content-Type: application/json
 
