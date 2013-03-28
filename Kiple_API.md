@@ -331,7 +331,7 @@ Response:
         "max-age" : int,
         "min-age" : int,
         "gender" : int,
-        "image-urls" : [ string ] } 
+        "image-url" : string } 
     ] 
 }
 ```
@@ -341,7 +341,7 @@ Response:
 아이템의 id를 이용하여 특정 옷의 정보를 갖어온다.
 
 ```
-URL:
+URL: /cloth/
 Method: GET
 Accept: application/json
 Content-Type: application/json
@@ -358,7 +358,6 @@ Response:
    "max-kpt" : int, // 키플머니 사용 가능액
    "max-age" : int,
    "min-age" : int,
-   "size" : string,
    "season" : [ string ], // ex) [ "봄", "여름", "가을" ]
    "category" : string, 
    "", 왜이렇게 state들을 나눠놨어
