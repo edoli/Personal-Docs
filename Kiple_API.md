@@ -124,6 +124,32 @@ Request:
 Response:
 { "logout-success" : boolean }
 ```
+
+### Signup
+
+회원가입
+
+```
+URL: /api/signup/
+Method: POST
+Accept: application/json
+Content-Type: application/json
+
+Request:
+{ "name" : string ,
+  "email" : string,
+  "password" : string,
+  "house-phone-number" : string,
+  "cell-phone-number" : string,
+  "address" : string,
+  "detail-address": string,
+  "children" : [ Child ] 
+  }
+
+Response:
+{ "signup-success" : boolean }
+```
+
 ### User Data
 사용자 정보 갖어오기
 
@@ -316,7 +342,7 @@ Request:
   "age" : int,
   "category" : category,
   "color" : color,
-  "season" : [ string ] // ex) [ "봄", "여름", "가을" ],
+  "seasons" : [ string ] // ex) [ "봄", "여름", "가을" ],
   "page" : int
 }
 // 데이터가 없으면 전체를 보여준다.
@@ -358,10 +384,11 @@ Response:
    "max-kpt" : int, // 키플머니 사용 가능액
    "max-age" : int,
    "min-age" : int,
-   "season" : [ string ], // ex) [ "봄", "여름", "가을" ]
+   "seasons" : [ string ], // ex) [ "봄", "여름", "가을" ]
    "category" : string, 
    "", 왜이렇게 state들을 나눠놨어
    "color" : color,
+  "discount-rate": int,
    "image-urls" : [ string ]
 } 
 ```
