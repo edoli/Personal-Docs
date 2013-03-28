@@ -362,7 +362,7 @@ Response:
    "category" : string, 
    "", 왜이렇게 state들을 나눠놨어
    "color" : color,
-   "image-urls" : [ { "url" : string } ]
+   "image-urls" : [ string ]
 } 
 ```
 
